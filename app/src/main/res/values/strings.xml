@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DataBindingTest</string>
+    <string name="dog_name">Dog</string>
+    <string name="dog_summary">If the kindest souls where rewarded with the longest lives, dogs will outlive us all.</string>
+    <string name="baby_name">Baby</string>
+    <string name="baby_summary">If you donot have a smile, I will give you one of mine.</string>
+</resources>
