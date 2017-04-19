@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+        <import type="android.view.View"/>
         <variable
             name="data"
             type="com.example.pprabhakaran.databindingtest.DataModel" />
@@ -24,14 +25,15 @@
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{data.name}"
+            android:text="@{data.name, default=@string/dog_name}"
+            android:visibility="@{data.name !=null ? View.VISIBLE : View.GONE,default=visible}"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
         <TextView
             android:id="@+id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{data.summary ?? data.name}"
+            android:text="@{data.summary ?? data.name, default=@string/dog_summary}"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
     </LinearLayout>
 </layout>
